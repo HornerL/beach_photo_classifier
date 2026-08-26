@@ -4,5 +4,4 @@ venv/
 .env
 .idea/
 .vscode/
-.*.pth/
-segformer_beach_weights_4th.pth
+*.pth
