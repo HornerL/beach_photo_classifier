@@ -10,7 +10,7 @@ from transformers import SegformerForSemanticSegmentation
 
 from DefineDataset import id2label, label2id
 
-## directory of images to classify
+## directory of images to classify 
 image_dir = r"C:\Users\lhorner\Data\Tulalip\ShellfishSurvey_photos\OneDrive_1_5-18-2026\Tulalip_MissionBeach_20240816"
 
 ## directory where classified masks will by saved
@@ -23,7 +23,7 @@ df_directory = r"C:\Users\lhorner\Data\Tulalip\ShellfishSurvey_photos\process_ph
 
 ## directory for saved model weights 
 
-weights_dir = r"C:\Users\lhorner\Documents\Python Scripts\GrainSize_class_Stuff\ModelWeights_SegFormer_1stDraft\segformer_beach_weights_5th.pth"
+weights_dir = r"C:\Users\lhorner\Documents\Python_Scripts\GrainSize_class_Stuff\beach_photo_classifier_github\classif_model_weights.pth"
  
 ### load saved model weights
 
