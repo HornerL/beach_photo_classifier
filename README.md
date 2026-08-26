@@ -18,3 +18,11 @@ To train a SegFormer model using your own training images and segmentation masks
 2. Use `EvaluateModel.py` to evaluate model performance.
 
 The dataset structure and class definitions used by the training and evaluation scripts are contained in `DefineDataset.py`.
+
+## Example Classification
+
+Examples of input photograph and the corresponding substrate classification produced by the trained model.
+
+![Example beach substrate classification](figures/example_classif.png)
+
+![Example beach substrate classification](figures/example_classif2.png)
