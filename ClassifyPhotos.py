@@ -6,6 +6,7 @@ import torch
 from PIL import Image
 import os
 import torch.nn.functional as F
+from transformers import SegformerForSemanticSegmentation
 
 from DefineDataset import id2label, label2id
 
