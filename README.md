@@ -25,4 +25,5 @@ Examples of input photograph and the corresponding substrate classification prod
 
 <img src="figures/example_classif.png" width="700">
 
+
 <img src="figures/example_classif2.png" width="700">
