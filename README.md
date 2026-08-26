@@ -6,7 +6,7 @@ Training data were generated using Dan Buscombe's supervised image segmentation 
 
 ## Using the Pre-Trained Model
 
-`Classify_Photos.py` can be used to classify the sample imagery or your own imagery, using the existing pre-trained [model weights](https://github.com/HornerL/beach_photo_classifier/releases/tag/v1.0.0)
+`Classify_Photos.py` can be used to classify the sample imagery or your own imagery, using the existing pre-trained [model weights](https://github.com/HornerL/beach_photo_classifier/releases/tag/v1.0.0). This model is still in production and is much better at classifying some substrate types than others. 
 
 ## Training Your Own Model
 
