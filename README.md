@@ -23,6 +23,6 @@ The dataset structure and class definitions used by the training and evaluation 
 
 Examples of input photograph and the corresponding substrate classification produced by the trained model.
 
-![Example beach substrate classification](figures/example_classif.png)
+<img src="figures/example_classif.png" width="700">
 
-![Example beach substrate classification](figures/example_classif2.png)
+<img src="figures/example_classif2.png" width="700">
