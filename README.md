@@ -1,6 +1,6 @@
 # Beach Photo Classifier
 
-This project uses a **SegFormer semantic segmentation model** to classify beach substrate types and calculate substrate percent cover from handheld photographs of mixed-sediment beaches.
+This project uses a **SegFormer semantic segmentation model** to classify intertidal substrate types and calculate substrate percent cover from handheld photographs of mixed-sediment beaches.
 
 Training data were generated using Dan Buscombe's supervised image segmentation tool, [Doodler](https://github.com/Doodleverse/dash_doodler).
 
