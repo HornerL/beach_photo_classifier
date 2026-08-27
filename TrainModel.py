@@ -10,19 +10,9 @@ VAL_MASK_DIR = r"C:\Users\lhorner\Data\Tulalip\Classification_Photos_cropped\lab
 TEST_IMAGE_DIR = r"C:\Users\lhorner\Data\Tulalip\Classification_Photos_cropped\labled_tiles\Images\Testing_500_Images"
 TEST_MASK_DIR = r"C:\Users\lhorner\Data\Tulalip\Classification_Photos_cropped\labled_tiles\Labels\Testing_500_Labels"
 
-MODEL_PATH = r"C:\Users\lhorner\Documents\Python Scripts\GrainSize_class_Stuff\ModelWeights_SegFormer_1stDraft\segformer_beach_weights_5th.pth"
+MODEL_PATH = r"C:\Users\lhorner\Documents\Python_Scripts\GrainSize_class_Stuff\beach_photo_classifier_github\classif_model_weights.pth"
 
 
-### Load a pre-trained SegFormer
-
-from transformers import SegformerForSemanticSegmentation
-
-model = SegformerForSemanticSegmentation.from_pretrained(
-    "nvidia/segformer-b2-finetuned-ade-512-512",
-    num_labels=8,
-    ignore_mismatched_sizes=True,
-    id2label=id2label,
-    label2id=label2id)
 
 ### create DataLoaders
 
@@ -38,6 +28,18 @@ train_loader = DataLoader(train_dataset, batch_size=2, shuffle=True)
 val_loader = DataLoader(val_dataset, batch_size=2)
 test_loader = DataLoader(test_dataset, batch_size=2)
 
+
+### Load a pre-trained SegFormer
+
+from transformers import SegformerForSemanticSegmentation
+
+model = SegformerForSemanticSegmentation.from_pretrained(
+    "nvidia/segformer-b2-finetuned-ade-512-512",
+    num_labels=8,
+    ignore_mismatched_sizes=True,
+    id2label=id2label,
+    label2id=label2id)
+
 ### Training Loop
 
 import torch
@@ -50,8 +52,6 @@ print("Model device:", next(model.parameters()).device)
 
 optimizer = AdamW(model.parameters(), lr=5e-5)
 
-processed = 0
-
 for epoch in range(20):
 
     model.train()
@@ -60,10 +60,8 @@ for epoch in range(20):
     for batch_idx, (images, masks) in enumerate(train_loader):
 
         if batch_idx % 50 == 0:
-            print(
-                f"Epoch {epoch+1} | "
-                f"Batch {batch_idx+1}/{len(train_loader)}"
-            )
+            print(f"Epoch {epoch+1} | "
+                f"Batch {batch_idx+1}/{len(train_loader)}")
 
         images = images.to(device)
         masks = masks.to(device)
@@ -80,13 +78,10 @@ for epoch in range(20):
 
     avg_train_loss = total_loss / len(train_loader)
 
-    print(
-        f"Epoch {epoch+1}: "
-        f"training loss = {avg_train_loss:.4f}"
-    )
+    print(f"Epoch {epoch+1}: "
+        f"training loss = {avg_train_loss:.4f}")
 
         
 ### save the model weights:
 torch.save(model.state_dict(), MODEL_PATH)
-
 
