@@ -2,7 +2,7 @@
 
 This project uses a **SegFormer semantic segmentation model** to classify intertidal substrate types and calculate substrate percent cover from handheld photographs of mixed-sediment beaches.
 
-Training data were generated using Dan Buscombe's supervised image segmentation tool, [Doodler](https://github.com/Doodleverse/dash_doodler).
+Training data were processed using Dan Buscombe's supervised image segmentation tool, [Doodler](https://github.com/Doodleverse/dash_doodler).
 
 ## Using the Pre-Trained Model
 
