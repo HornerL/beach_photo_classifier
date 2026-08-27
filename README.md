@@ -6,7 +6,7 @@ Training data were generated using Dan Buscombe's supervised image segmentation 
 
 ## Using the Pre-Trained Model
 
-`Classify_Photos.py` can be used to classify the sample imagery or your own imagery, using the existing pre-trained [model weights](https://github.com/HornerL/beach_photo_classifier/releases/tag/v1.0.0). This model is still in production and is much better at classifying some substrate types than others. 
+`Classify_Photos.py` can be used to classify the sample imagery or your own imagery, using the existing pre-trained [model weights](https://github.com/HornerL/beach_photo_classifier/releases/tag/v1.0.0). This model is still in production and is better at classifying some substrate types than others. 
 
 ## Training Your Own Model
 
@@ -23,5 +23,8 @@ Examples of input photograph and the corresponding substrate classification prod
 
 <img src="figures/example_classif.png" width="700">
 
-
 <img src="figures/example_classif2.png" width="700">
+
+Confusion matrix showing model skill at identifying the various classes. Current iteration of model suffers from not enough training imagery of fine sand and mud, and struggles to make the distinction. 
+
+<img src="figures/confusion_matrix.png" width="550">
