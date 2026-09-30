@@ -25,6 +25,6 @@ Examples of input photograph and the corresponding substrate classification prod
 
 <img src="figures/example_classif2.png" width="700">
 
-A confusion matrix showing model skill at identifying the various classes. The current iteration of model suffers from not enough training imagery of fine sand and mud, and struggles to distinguish between them.
+A confusion matrix showing model skill at identifying the various classes. The current iteration of the model struggles to distinguish between fine sand and mud, likely because it needs more training imagery of these two classes.
 
 <img src="figures/confusion_matrix.png" width="550">
